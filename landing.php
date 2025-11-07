@@ -15,8 +15,7 @@
 <body>
   <?php include('header.php')?>
    <section class="hero" id="home">
-   <div class="hero-content animate-fadeInUp highlight">
-
+   <div class="hero-content animate-fadeInUp">
       <h1>Premium Laundry & Dry Cleaning</h1>
       <p>Experience the freshness of perfectly cleaned clothes — delivered to your doorstep with care, precision, and unmatched quality.</p>
       <div class="hero-buttons">

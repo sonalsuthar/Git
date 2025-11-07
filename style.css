@@ -131,20 +131,11 @@ header.scrolled {
 
 .hero h1 {
   font-size: 4rem;
-  font-weight: bold;
+  font-weight: 900;
   margin-bottom: 1.5rem;
   line-height: 1.2;
   text-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
 }
-.hero h1 .highlight {
-  background: linear-gradient(to right, #ffffff, #e0ffe0);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  display: inline-block;
-  position: relative;
-}
-
 
 .hero p {
   font-size: 1.3rem;
