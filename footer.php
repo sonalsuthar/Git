@@ -1,42 +1,35 @@
+<!-- ================= FOOTER ================= -->
 <footer class="purewash-footer">
   <div class="footer-wrapper">
 
-    <!-- About Section -->
-   <div class="footer-box about">
-        <h3>About PureWash</h3>
-  <p>PureWash is dedicated to providing top-quality laundry and dry cleaning services with convenience and care. Our mission is to make your life easier, one clean garment at a time.</p>
-</div>
-
-    <!-- Contact Info -->
-    <div class="footer-box newsletter">
-      <h3>Contact Us</h3>
-      <p><i class="fas fa-map-marker-alt"></i> 123 Clean Street, Surat, Gujarat</p>
-      <p><i class="fas fa-phone"></i> +91 98765 43210</p>
-      <p><i class="fas fa-envelope"></i> support@purewash.in</p>
+    <div class="footer-box about-box">
+      <h3>sparQlean</h3>
+      <p>Premium laundry & dry-cleaning in Surat.</p>
     </div>
 
-    <!-- Quick Links -->
-    <div class="footer-box links">
+    <div class="footer-box">
       <h3>Quick Links</h3>
       <ul>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">Pricing</a></li>
-        <li><a href="#">Reviews</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#reviews">Reviews</a></li>
       </ul>
     </div>
+
+    <div class="footer-box">
+      <h3>Follow Us</h3>
+      <div class="social-media">
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+      </div>
+    </div>
+
   </div>
 
-  <!-- Social Media -->
-  <div class="social-media">
-    <a href="https://instagram.com/purewash.in" target="_blank"><i class="fab fa-instagram"></i></a>
-    <a href="https://facebook.com/purewash.in" target="_blank"><i class="fab fa-facebook-f"></i></a>
-    <a href="https://twitter.com/purewash_in" target="_blank"><i class="fab fa-twitter"></i></a>
-    <a href="https://youtube.com/purewash" target="_blank"><i class="fab fa-youtube"></i></a>
-  </div>
-
-  <!-- Copyright -->
   <div class="footer-bottom">
-    <p>© 2025 PureWash. All rights reserved.</p>
+    © 2025 sparQlean. All Rights Reserved.
   </div>
 </footer>
