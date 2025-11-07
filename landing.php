@@ -14,7 +14,17 @@
 </head>
 <body>
   <?php include('header.php')?>
-   
+   <section class="hero" id="home">
+   <div class="hero-content animate-fadeInUp highlight">
+
+      <h1>Premium Laundry & Dry Cleaning</h1>
+      <p>Experience the freshness of perfectly cleaned clothes — delivered to your doorstep with care, precision, and unmatched quality.</p>
+      <div class="hero-buttons">
+        <button class="btn-primary" >Schedule Pickup</button>
+        <button class="btn-secondary" >Explore Services</button>
+        </div>
+    </div>
+  </section>
   <?php include('footer.php')?>
 
 </body>

@@ -3,10 +3,7 @@
 
     <!-- About Section -->
    <div class="footer-box about">
-  <div class="logo-section">
-    <img src="logo-2.png" alt="PureWash Logo" class="logo-img">
-    
-  </div>
+        <h3>About PureWash</h3>
   <p>PureWash is dedicated to providing top-quality laundry and dry cleaning services with convenience and care. Our mission is to make your life easier, one clean garment at a time.</p>
 </div>
 
