@@ -1,0 +1,387 @@
+/* ======= GLOBAL RESET ======= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ======= COLOR VARIABLES ======= */
+:root {
+  --primary: #00a86b;
+  --primary-dark: #007a4d;
+  --secondary: #00ff99;
+  --dark: #0a0e27;
+  --light: #f8fafc;
+  --gradient: linear-gradient(135deg, #00a86b 0%, #00ff99 100%);
+}
+
+/* ======= BODY ======= */
+body {
+  color: #333;
+  background-color: var(--light);
+  overflow-x: hidden;
+}
+
+/* ======= HEADER / NAVBAR ======= */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(0, 80, 50, 0.9); /* translucent greenish background */
+  backdrop-filter: blur(10px);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+header.scrolled {
+  background: rgba(0, 100, 60, 0.95);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 7%;
+  height: 100px;
+}
+
+.logo img {
+  width: 210px;
+  height: auto;
+  display: block;
+  filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.4)); /* improves white logo visibility */
+}
+
+/* NAV LINKS */
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 2.5rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: white;
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.nav-links a:hover {
+  color: var(--secondary);
+}
+
+/* CALL TO ACTION BUTTON */
+.cta-btn {
+  padding: 0.7rem 1.8rem;
+  background: var(--gradient);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 168, 107, 0.3);
+}
+
+.cta-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 168, 107, 0.4);
+}
+
+/* ======= HERO SECTION ======= */
+.hero {
+  margin-top: 80px;
+  min-height: 90vh;
+  background: linear-gradient(135deg, #00a86b, #00c97b);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  color: white;
+  text-align: center;
+}
+
+.hero-content {
+  max-width: 900px;
+  padding: 2rem;
+  animation: fadeInUp 1s ease;
+}
+
+.hero h1 {
+  font-size: 4rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+  text-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.hero p {
+  font-size: 1.3rem;
+  margin-bottom: 2.5rem;
+  opacity: 0.95;
+  font-weight: 300;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* BUTTONS */
+.btn-primary {
+  padding: 1rem 2.5rem;
+  background: white;
+  color: var(--primary);
+  border: none;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+.btn-secondary {
+  padding: 1rem 2.5rem;
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background: white;
+  color: var(--primary);
+  transform: translateY(-3px);
+}
+
+/* ======= FOOTER (Green version of PureWash) ======= */
+.purewash-footer {
+  background: linear-gradient(to right, #e2f8ed, #f1fff5);
+  color: #333;
+  padding: 50px 20px 20px;
+}
+
+.footer-box h3 {
+  color: var(--primary);
+}
+
+.footer-box ul li a {
+  color: var(--primary-dark);
+}
+
+.footer-box ul li a:hover {
+  color: var(--primary);
+}
+
+.social-media a {
+  color: var(--primary);
+}
+
+.social-media a:hover {
+  color: var(--primary-dark);
+}
+
+/* ======= RESPONSIVE ======= */
+@media (max-width: 968px) {
+  .nav-links {
+    display: none;
+  }
+
+  .navbar {
+    padding: 1rem 5%;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+}
+
+/* ======= ANIMATIONS ======= */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+/* ======= PUREWASH FOOTER ======= */
+.purewash-footer {
+  background: linear-gradient(to right, #e2f8ed, #f1fff5);
+  color: #333;
+  padding: 60px 10% 25px;
+  font-family: "Poppins", sans-serif;
+  border-top: 3px solid #00a86b;
+}
+
+/* ======= FOOTER WRAPPER ======= */
+.footer-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-bottom: 30px;
+}
+
+/* ======= FOOTER BOXES ======= */
+.footer-box {
+  flex: 1 1 300px;
+  min-width: 250px;
+}
+
+/* ======= LOGO SECTION ======= */
+.logo-section {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.logo-section .logo-img {
+  width: 180px;
+  height: auto;
+  display: block;
+  filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.2));
+}
+
+/* ======= ABOUT SECTION TEXT ======= */
+.about p {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #444;
+}
+
+/* ======= HEADINGS ======= */
+.footer-box h3 {
+  color: #00a86b;
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  position: relative;
+}
+
+.footer-box h3::after {
+  content: '';
+  width: 45px;
+  height: 3px;
+  background: #00a86b;
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  border-radius: 2px;
+}
+
+/* ======= CONTACT INFO ======= */
+.footer-box p {
+  margin-bottom: 0.5rem;
+  color: #444;
+  font-weight: 500;
+}
+
+.footer-box p i {
+  color: #00a86b;
+  margin-right: 10px;
+}
+
+/* ======= QUICK LINKS ======= */
+.footer-box ul {
+  list-style: none;
+  margin-top: 1rem;
+}
+
+.footer-box ul li {
+  margin-bottom: 0.6rem;
+}
+
+.footer-box ul li a {
+  text-decoration: none;
+  color: #007a4d;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.footer-box ul li a:hover {
+  color: #00a86b;
+}
+
+/* ======= SOCIAL MEDIA ======= */
+.social-media {
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+.social-media a {
+  display: inline-block;
+  margin: 0 10px;
+  color: #00a86b;
+  font-size: 1.4rem;
+  transition: all 0.3s ease;
+}
+
+.social-media a:hover {
+  color: #007a4d;
+  transform: scale(1.15);
+}
+
+/* ======= COPYRIGHT ======= */
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid #cce8dc;
+  padding-top: 15px;
+  color: #555;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+/* ======= RESPONSIVE DESIGN ======= */
+@media (max-width: 900px) {
+  .footer-wrapper {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-box h3::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .footer-box p i {
+    margin-right: 6px;
+  }
+
+  .social-media a {
+    margin: 0 8px;
+  }
+}
