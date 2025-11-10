@@ -358,39 +358,39 @@ nav ul li.dropdown:hover .dropdown-menu {
     font-weight: 700;
   }
 
-  /* ================= PRICING ================= */
-  .pricing {
-    padding: 6rem 7%;
-    background: white;
-  }
-  .pricing-grid {
-    display: grid;
-    gap: 2rem;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  }
-  .pricing-card {
-    background: white;
-    border-radius: 20px;
-    padding: 2.5rem;
-    text-align: center;
-    border: 2px solid #e6eee9;
-    transition: all 0.3s ease;
-  }
-  .pricing-card:hover {
-    transform: translateY(-5px);
-  }
-  .pricing-card.featured {
-    transform: scale(1.05);
-    border-color: var(--primary);
-  .price {
-    font-size: 2.8rem;
-    background: var(--gradient);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-    -webkit-text-fill-color: transparent;
-  }
+    /* ================= PRICING ================= */
+    .pricing {
+      padding: 6rem 7%;
+      background: white;
+    }
+    .pricing-grid {
+      display: grid;
+      gap: 2rem;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    }
+    .pricing-card {
+      background: white;
+      border-radius: 20px;
+      padding: 2.5rem;
+      text-align: center;
+      border: 2px solid #e6eee9;
+      transition: all 0.3s ease;
+    }
+    .pricing-card:hover {
+      transform: translateY(-5px);
+    }
+    .pricing-card.featured {
+      transform: scale(1.05);
+      border-color: var(--primary);
+    .price {
+      font-size: 2.8rem;
+      background: var(--gradient);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+      -webkit-text-fill-color: transparent;
+    }
 
   /* ================= TESTIMONIALS ================= */
   .testimonials {
