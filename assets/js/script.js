@@ -1,75 +1,80 @@
-// ================= MODAL FUNCTIONALITY =================
-const modal = document.getElementById("serviceModal");
-const openModal = document.getElementById("openModal");
-const closeModal = document.getElementById("closeModal");
+document.addEventListener("DOMContentLoaded", () => {
+  const modal = document.getElementById("serviceModal");
+  const openModalBtn = document.getElementById("openModal");
+  const closeModalBtn = document.getElementById("closeModal");
 
-openModal.onclick = () => {
-  modal.classList.add("show");
-};
-
-closeModal.onclick = () => {
-  modal.classList.remove("show");
-};
-
-window.onclick = (e) => {
-  if (e.target === modal) {
-    modal.classList.remove("show");
+  // Open modal
+  if (openModalBtn && modal) {
+    openModalBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      modal.style.display = "flex";
+      document.body.style.overflow = "hidden";
+    });
   }
-};
 
-// Optional: Smooth header scroll class
-window.addEventListener("scroll", () => {
-  document.getElementById("header").classList.toggle("scrolled", window.scrollY > 40);
+  // Close modal (X button)
+  if (closeModalBtn && modal) {
+    closeModalBtn.addEventListener("click", () => {
+      modal.style.display = "none";
+      document.body.style.overflow = "auto";
+    });
+  }
+
+  // Close modal when clicking outside content
+  window.addEventListener("click", (e) => {
+    if (e.target === modal) {
+      modal.style.display = "none";
+      document.body.style.overflow = "auto";
+    }
+  });
+
+  // Optional: add “Esc” key to close modal
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && modal.style.display === "flex") {
+      modal.style.display = "none";
+      document.body.style.overflow = "auto";
+    }
+  });
 });
 
-// header scroll handler
-(function(){
-  const header = document.querySelector('header');
-  const hero = document.querySelector('.hero');
-  const openModalBtn = document.getElementById('openModal');
-  const modal = document.getElementById('serviceModal');
-  const closeModal = document.getElementById('closeModal');
 
-  function onScroll(){
-    if(window.scrollY > 30) header.classList.add('scrolled');
-    else header.classList.remove('scrolled');
-  }
-  document.addEventListener('scroll', onScroll, {passive:true});
-  onScroll();
-
-  // Modal open/close
-  if(openModalBtn && modal){
-    openModalBtn.addEventListener('click', e=>{
-      e.preventDefault();
-      modal.classList.add('show');
-      document.body.style.overflow = 'hidden';
-    });
-  }
-  if(closeModal){
-    closeModal.addEventListener('click', ()=>{
-      modal.classList.remove('show');
-      document.body.style.overflow = '';
-    });
-  }
-  // close modal on overlay click
-  if(modal){
-    modal.addEventListener('click', (ev)=>{
-      if(ev.target === modal){
-        modal.classList.remove('show');
-        document.body.style.overflow = '';
-      }
-    });
-  }
-
-  // Floating labels: toggle "valid" state based on input value
-  document.querySelectorAll('.input-group input, .input-group textarea').forEach(inp=>{
-    function check(){
-      if(inp.value && inp.value.trim() !== '') inp.classList.add('has-value');
-      else inp.classList.remove('has-value');
-    }
-    inp.addEventListener('input', check);
-    inp.addEventListener('blur', check);
-    // init
-    check();
+document.addEventListener("DOMContentLoaded", () => {
+  const header = document.querySelector("header");
+  window.addEventListener("scroll", () => {
+    header.classList.toggle("scrolled", window.scrollY > 50);
   });
-})();
+
+  // Smooth Scroll
+  document.querySelectorAll('a[href^="#"]').forEach(link => {
+    link.addEventListener("click", function (e) {
+      e.preventDefault();
+      document.querySelector(this.getAttribute("href")).scrollIntoView({
+        behavior: "smooth"
+      });
+    });
+  });
+});
+
+// Animation on Scroll
+const faders = document.querySelectorAll(".animate-fadeInUp");  
+const appearOptions = {
+  threshold: 0,
+  rootMargin: "0px 0px -100px 0px"
+};  
+const appearOnScroll = new IntersectionObserver(function(
+  entries,
+  appearOnScroll
+) { {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) {  
+      return;
+    } else {
+      entry.target.classList.add("fadeInUp");
+      appearOnScroll.unobserve(entry.target);
+    }
+  });
+}}, appearOptions);
+
+faders.forEach(fader => {
+  appearOnScroll.observe(fader);
+});

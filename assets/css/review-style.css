@@ -1,0 +1,217 @@
+/* ================= BASE STYLES ================= */
+:root {
+  --primary: #00a86b;
+  --primary-dark: #007a4d;
+  --accent: #22ffbb;
+  --light: #f5fffa;
+  --text-dark: #043423;
+  --text-muted: #555;
+  --gradient: linear-gradient(135deg, #00a86b, #007a4d);
+  --shadow-soft: 0 8px 25px rgba(0, 0, 0, 0.08);
+  --shadow-strong: 0 12px 35px rgba(0, 0, 0, 0.12);
+  font-family: "Poppins", sans-serif;
+}
+
+/* ================= HERO ================= */
+.reviews-hero {
+  background: var(--gradient);
+  color: white;
+  text-align: center;
+  padding: 6rem 5% 4rem;
+}
+.reviews-hero h1 {
+  font-size: 2.8rem;
+  font-weight: 800;
+}
+.reviews-hero p {
+  margin-top: 0.8rem;
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  color: #eafff3;
+}
+
+/* ================= REVIEWS SECTION ================= */
+.reviews-section {
+  background: var(--light);
+  padding: 6rem 8%;
+}
+.reviews-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+.review-card {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: var(--shadow-soft);
+  padding: 2rem;
+  transition: all 0.3s ease;
+}
+.review-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-strong);
+}
+.review-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.avatar {
+  width: 55px;
+  height: 55px;
+  background: var(--gradient);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  font-size: 1.3rem;
+  margin-right: 1rem;
+  box-shadow: 0 4px 15px rgba(0, 168, 107, 0.3);
+}
+.review-info h4 {
+  color: var(--primary-dark);
+  margin-bottom: 0.2rem;
+  font-weight: 600;
+}
+.stars {
+  color: #ffc107;
+  font-size: 1rem;
+}
+.review-text {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* ================= ADD REVIEW FORM ================= */
+.add-review-section {
+  background: #fff;
+  text-align: center;
+  padding: 6rem 8%;
+}
+.add-review-section h2 {
+  font-size: 2.2rem;
+  color: var(--primary-dark);
+  font-weight: 700;
+}
+.add-review-section p {
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+  font-size: 1rem;
+}
+.review-form {
+  max-width: 600px;
+  margin: 0 auto;
+  background: var(--light);
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: var(--shadow-soft);
+}
+.input-group {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+.input-group input,
+.input-group textarea,
+.input-group select {
+  width: 100%;
+  padding: 1rem;
+  border: 2px solid #e6eee9;
+  border-radius: 10px;
+  outline: none;
+  font-size: 1rem;
+  background: transparent;
+  transition: 0.3s ease;
+}
+.input-group label {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  color: #777;
+  background: white;
+  padding: 0 0.4rem;
+  pointer-events: none;
+  transition: 0.25s;
+}
+.input-group input:focus,
+.input-group textarea:focus,
+.input-group select:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(0, 168, 107, 0.1);
+}
+.input-group input:focus + label,
+.input-group input:valid + label,
+.input-group textarea:focus + label,
+.input-group textarea:valid + label {
+  top: -0.7rem;
+  left: 0.9rem;
+  font-size: 0.8rem;
+  color: var(--primary);
+}
+.submit-btn {
+  width: 100%;
+  padding: 1rem;
+  background: var(--gradient);
+  border: none;
+  border-radius: 12px;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+  box-shadow: 0 6px 20px rgba(0, 168, 107, 0.3);
+}
+.submit-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(0, 168, 107, 0.45);
+}
+
+/* ================= ANIMATION ================= */
+.animate-fadeInUp {
+  opacity: 0;
+  animation: fadeInUp 1s ease forwards;
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .reviews-hero h1 {
+    font-size: 2.1rem;
+  }
+  .review-card {
+    padding: 1.6rem;
+  }
+  .review-form {
+    padding: 1.5rem;
+  }
+}
+@media (max-width: 480px) {
+  .reviews-hero h1 {
+    font-size: 1.8rem;
+  }
+  .reviews-hero p {
+    font-size: 0.95rem;
+  }
+}
+@media (max-width: 400px) {
+  .review-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .avatar {
+    margin-bottom: 0.5rem;
+  }
+}

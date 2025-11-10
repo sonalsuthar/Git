@@ -45,3 +45,8 @@
     <p>© 2025 <strong>sparQlean</strong>. All rights reserved. | Designed with 💚 by <span>PureSkill</span></p>
   </div>
 </footer>
+ 
+<!-- ========== FLOATING WHATSAPP BUTTON ========== -->
+<a href="https://wa.me/918780529628" target="_blank" class="whatsapp-float" title="Chat on WhatsApp">
+  <i class="fa-brands fa-whatsapp"></i>
+</a>
